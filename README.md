@@ -3,4 +3,5 @@ I am using this book to deepen my understanding of python, how to better write p
 This repo will contain all my practice code and book examples.
 
 ### Chapter 1: The Python Data Model
-1. Card-deck
+1. [Card-deck](./Chapter_The_Python_Data_Model/card-deck/)
+2. [Two-Dimentional-Vector](./Chapter_The_Python_Data_Model/two-dimensional-vector/)
