@@ -8,10 +8,11 @@ Card = collections.namedtuple("Card", ['rank', 'suit'])
 class FrenchDeck:
     ranks = [str(n) for n in range(2, 11)] + list("JQKA")
     suits = "spades diamonds clubs hearts".split()
-    
+
     def __init__(self):
-        self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
-    
+        self._cards = [Card(rank, suit)
+                       for suit in self.suits for rank in self.ranks]
+
     def __len__(self):
         return len(self._cards)
 
@@ -24,7 +25,7 @@ print(beer_card)
 
 deck = FrenchDeck()
 
-# Happens because we have mentioned __len__() inside the class. 
+# Happens because we have mentioned __len__() inside the class.
 # len(deck) is calling deck.__len__(), which is a simple method call now.
 print(len(deck))
 

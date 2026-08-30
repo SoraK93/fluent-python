@@ -5,3 +5,9 @@ This repo will contain all my practice code and book examples.
 ### Chapter 1: The Python Data Model
 1. [Card-deck](./Chapter_The_Python_Data_Model/card-deck/)
 2. [Two-Dimentional-Vector](./Chapter_The_Python_Data_Model/two-dimensional-vector/)
+3. [Notes](./Chapter1_The_Python_Data_Model/NOTES.md)
+
+### Chapter 2: An Array of Sequences
+1. 
+2. 
+3. [Notes](./Chapter2_An_Array_of_Sequences/NOTES.md)
