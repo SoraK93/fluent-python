@@ -52,11 +52,10 @@ Three very important specializations of `Collection` are:
 - `Set, the interface of the `set` and `frozenset` built-in types
 > <small>Sequence are reversible, because it supports arbitrary ordering of their contents, while mappings and sets do not.</small>
 
-<figure style="text-align: center;">
-  <img src="./Ref-Image/WhatsApp%20Image%202026-08-29%20at%2018.17.18.jpeg" alt="UML class diagram"
-  style="display: block; margin: auto;">
-  <figcaption><i><small>All the classes in the diagram are ABCs--abstract base classes.</small></i></figcaption>
-</figure>
+<p align="center">
+  <img src="./Ref-Image/WhatsApp%20Image%202026-08-29%20at%2018.17.18.jpeg" alt="UML class diagram">
+  <i><small>All the classes in the diagram are ABCs--abstract base classes.</small></i>
+</p>
 
 > [!NOTE]
 > Augmented assignments are shortcuts combining an infix operator with variable assignment, e.g., a += b
