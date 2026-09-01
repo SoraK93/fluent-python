@@ -41,41 +41,12 @@ A quick way to build a sequence is using a list comprehension (if the target is 
 
 Python programmers refer to list comprehensions as `listcomps`, generator expressions as `genexps`.
 
-#### List comprehensions and Readability
+#### List comprehensions and Readability [[Example](./examples/listcomp.py)]
 A `for` loop may be used to do lots of different things: scanning a sequence to count or pick items, computing aggregates (sums, averages), or any number of other tasks.
 
-_Example: Build a list of Unicode code points from a string_
-```python
-symbols = "!@#$%"
-codes = []
-for symbol in symbols:
-    codes.append(ord(symbol))
-print(codes)
->>> [33, 64, 35, 36, 37]
-```
-_Example: Build a list of Unicode code points from a string, using a listcomp_
-```python
-symbols = "!@#$%"
-codes = [ord(symbol) for symbol in symbols]
-print(code)
->>> [33, 64, 35, 36, 37]
-```
-#### Local Scope Within Comprehensions and Generator Expressions
+#### Local Scope Within Comprehensions and Generator Expressions [[Example](./examples/listcomp_scope.py)]
 In Python 3, list comprehensions, generator expressions, and their siblings set and dict comprehensions, have a  local scope to hold the variables assigned in the for clause.
 However, variables assigned with the "Walrus Operator" := remain accessible after those comprehensions or expressions return -- unlike local variables in a function.
-```python
-x = "ABC"
-codes = [ord(x) for x in x]
-print(x)
->>> "ABC"
-print(codes)
->>> [65, 66, 67]
-codes = [last := ord(c) for c in x]
-print(last)
->>> 67
-print(c)
->>> "NameError: name 'c' is not defined"
-```
 
 > [!IMPORTANT]
 > Walrus expression (:=) works when you're assigning and checking in the same expression
@@ -92,4 +63,20 @@ print(c)
 >     count += 1
 > ```
 
+#### Listcomps Versus map and filter [[Example](./examples/listcomp_map_filter.py)]
+Listcomps are a one-trick pony: they build lists.
 
+> [!NOTE]
+> To generate data for other sequence types, a genexp is the way to go
+
+#### Cartesian Products [[Example](./examples/cartesian_product.py)]
+Listcomps can build lists from the Cartesian product of two or more iterables. The items that make up the Cartesian product are tuples made from items from every input iterable.
+
+#### Generator Expressions [[Example](./examples/genexp.py)]
+A genexp saves memory because it yields items one by one using the iterator protocol instead of building a while list just to feed another constructor.
+> Uses the same syntax as listcomps, but are enclosed in parentheses rather than brackets.
+
+## Tuples Are Not Just Immutable Lists
+Tuples can be used as immutable lists and also as records with no field names.
+
+#### Tuples as Records
